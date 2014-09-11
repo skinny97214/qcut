@@ -1,0 +1,25 @@
+{% include header.html %}
+
+<div class="headerPost {{ page.title | remove: ' '}}" class="hide-for-small">
+</div> <!-- /headerPost -->
+
+<div id="post">
+
+<div class="row">
+<div class="large-3 columns">
+
+<h3>{{ page.title }}</h3>
+</div>
+<div class="large-9 columns">
+{{ content }}
+
+<hr>
+<h4><i class="icon-chevron-right"></i> Discover more in the <a href="/archive/">archive</a>!</h4>
+</div>
+</div>
+
+
+	</div>
+</div> <!-- /post -->
+
+{% include footer.html %}
