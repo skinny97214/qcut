@@ -19,6 +19,7 @@ to do
 * add retina graphics
 * on the post detail page, add "other posts tagged [same tag]"
 * facebook auto posting from IFTTT
+* Update CNAME to qcut.com
 
 DONE
 
