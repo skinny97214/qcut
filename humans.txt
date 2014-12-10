@@ -1,14 +1,20 @@
-/* Person & Place was created and is maintained by Crystal Beasley */
-/* skinnywhitegirl.com */
-/* humanstxt.org */
-
 /* TEAM */
-  Your title: Crystal Beasley
-  Site: skinnywhitegirl.com
-  Twitter: skinny
+  CEO: Crystal Beasley
+  Contact: crystal@qcut.co
+  Twitter: @skinny
   Location: Portland, OR, USA
 
+  Chief Innovator: Gerald Ruderman
+  Contact: gerald@qcut.co
+
+/* THANKS */
+  Project Manager: Peter Torelli
+  Contact: peter@petertorelli.com
+  Twitter: @petertorelli
+  Location: Portland, OR, USA
+  
 /* SITE */
+  Last update: 2014/12/01
   Standards: HTML5, CSS3
-  Components: ZURB Foundation 4, List.js, Font Awesome
+  Components: List.js, Font Awesome, jQuery, Mailchimp
   Software: Sublime Text, Git
