@@ -325,3 +325,9 @@ blockquote {
 	section.title h1 { font-size: 3.5em; }
 	p { -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; }
 }
+
+/* mailchimp */
+
+.mc-field-group input {
+	width: 300px;
+}
