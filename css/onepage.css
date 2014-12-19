@@ -326,8 +326,8 @@ blockquote {
 	p { -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; }
 }
 
-/* mailchimp */
+/* fit survey */
 
-.mc-field-group input {
-	width: 300px;
+input {
+	clear: after;
 }
