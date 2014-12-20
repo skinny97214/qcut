@@ -11,8 +11,13 @@
 		<link rel="stylesheet" media="screen, projection" href="/css/onepage.css">
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <!-- Used by foundation -->
-    <script src="/js/vendor/modernizr.js"></script>
+
+        <!-- ptorelli - controller -->
+        <script>var gAuthEmail = '{{auth_email}}';</script>
+        <script src="/control.js"></script>
+
+        <!-- Used by foundation -->
+        <script src="/js/vendor/modernizr.js"></script>
 	</head>
 
 	<body id="container">
@@ -35,8 +40,8 @@
 				  </div>
 				  <div class="large-4 columns">
 				    <label for="first-name">Name</label>
-				    <input type="text" name="first-name" value="" placeholder="first name"/>
-				    <input type="text" name="last-name" value="" placeholder="last name"/>
+				    <input type="text" name="first_name" value="" placeholder="first name"/>
+				    <input type="text" name="last_name" value="" placeholder="last name"/>
 				  </div>
 				  <div class="large-4 columns">
 					  &nbsp;
@@ -74,28 +79,28 @@
 				  	<div class="row collapse">
 				  	        <label for="HEIGHTFEET">Height </label>
 				  	        <div class="small-6 columns">
-				  	          <select name="HEIGHTFEET" class="" id="mce-HEIGHTFEET">
+				  	          <select name="height_feet" class="" id="mce-HEIGHTFEET">
 				  	          	<option value="-ft-">-ft-</option>
-				  	          	<option value="4&quot;">4&quot;</option>
-				  	          	<option value="5&quot;">5&quot;</option>
-				  	          	<option value="6&quot;">6&quot;</option>
+				  	          	<option value="4">4&#39;</option>
+				  	          	<option value="5">5&#39;</option>
+				  	          	<option value="6">6&#39;</option>
 				  	          </select>
 				  	        </div>
 				  	        <div class="small-6 columns">
-				  	          <select name="HEIGHTINCH" class="" id="mce-HEIGHTINCH">
+				  	          <select name="height_inch" class="" id="mce-HEIGHTINCH">
 				  	          	<option value="-in-">-in-</option>
-				  	          	<option value="0&quot;">0&quot;</option>
-				  	          	<option value="1&quot;">1&quot;</option>
-				  	          	<option value="2&quot;">2&quot;</option>
-				  	          	<option value="3&quot;">3&quot;</option>
-				  	          	<option value="4&quot;">4&quot;</option>
-				  	          	<option value="5&quot;">5&quot;</option>
-				  	          	<option value="6&quot;">6&quot;</option>
-				  	          	<option value="7&quot;">7&quot;</option>
-				  	          	<option value="8&quot;">8&quot;</option>
-				  	          	<option value="9&quot;">9&quot;</option>
-				  	          	<option value="10&quot;">10&quot;</option>
-				  	          	<option value="11&quot;">11&quot;</option>
+				  	          	<option value="0">0&quot;</option>
+				  	          	<option value="1">1&quot;</option>
+				  	          	<option value="2">2&quot;</option>
+				  	          	<option value="3">3&quot;</option>
+				  	          	<option value="4">4&quot;</option>
+				  	          	<option value="5">5&quot;</option>
+				  	          	<option value="6">6&quot;</option>
+				  	          	<option value="7">7&quot;</option>
+				  	          	<option value="8">8&quot;</option>
+				  	          	<option value="9">9&quot;</option>
+				  	          	<option value="10">10&quot;</option>
+				  	          	<option value="11">11&quot;</option>
 				  	          </select>
 				  	        </div>
 				  	      </div>
@@ -107,7 +112,7 @@
 				  		
 				  		
 				  		<label for="mce-SHOESIZE">Shoe size </label>
-				  			<select name="SHOESIZE" class="" id="mce-SHOESIZE">
+				  			<select name="size_shoe" class="" id="mce-SHOESIZE">
 				  				<option value="--">--</option>
 				  				<option value="3">3</option>
 				  				<option value="3.5">3.5</option>
@@ -139,7 +144,7 @@
 				  		        <div class="helper">What if I don’t know?</div>
 				  		        
 				  		        <div class="small-6 columns">
-				  		          <select name="BRABAND" class="" id="mce-BRABAND">
+				  		          <select name="size_bra_band" class="" id="mce-BRABAND">
 				  		          	<option value="--">-band-</option>
 				  		          	<option value="28">28</option>
 				  		          	<option value="30">30</option>
@@ -152,7 +157,7 @@
 				  		          </select>
 				  		        </div>
 				  		        <div class="small-6 columns">
-				  		          <select name="BRACUP" class="" id="mce-BRACUP">
+				  		          <select name="size_bra_cup" class="" id="mce-BRACUP">
 				  		          	<option value="--">-cup-</option>
 				  		          	<option value="AA">AA</option>
 				  		          	<option value="A">A</option>
@@ -177,7 +182,7 @@
 				  			
 				  		
 				  		<label for="mce-PANTSIZE">Size of you best-fitting pair of jeans </label>
-				  		<select name="PANTSIZE" class="" id="mce-PANTSIZE">
+				  		<select name="size_inseam" class="" id="mce-PANTSIZE">
 				  			<option value=""></option>
 				  			<option value="US 23 / 000">US 23 / 000</option>
 				  			<option value="US 24 / 00">US 24 / 00</option>
@@ -224,25 +229,25 @@
 				    <p>Usually when you try on jeans, if the hips fit…</p>
 				    				
 				    				<label for="waist">Then the waist is?</label>
-				    				<input type="radio" name="1-waist" value="way too small" /><label for="1-waist">way too small</label>
-				    				<input type="radio" name="2-waist" value="too small" /><label for="2-waist">too small</label>
-				    				<input type="radio" name="3-waist" value="about right" /><label for="3-waist">about right</label>
-				    				<input type="radio" name="4-waist" value="too big" /><label for="4-waist">too big</label>
-				    				<input type="radio" name="5-waist" value="way too big" /><label for="5-waist">way too big</label>
+				    				<input type="radio" name="fit_waist" value="1" id='fw1' /><label for="fw1">way too small</label>
+				    				<input type="radio" name="fit_waist" value="2" id='fw2' /><label for="fw2">too small</label>
+				    				<input type="radio" name="fit_waist" value="3" id='fw3' /><label for="fw3">about right</label>
+				    				<input type="radio" name="fit_waist" value="4" id='fw4' /><label for="fw4">too big</label>
+				    				<input type="radio" name="fit_waist" value="5" id='fw5' /><label for="fw5">way too big</label>
 				    
 				    				<label for="thighs">Are the thighs?</label>
-				    				<input type="radio" name="1-thighs" value="way too small" /><label for="1-thighs">way too small</label>
-				    				<input type="radio" name="2-thighs" value="too small" /><label for="2-thighs">too small</label>
-				    				<input type="radio" name="3-thighs" value="about right" /><label for="3-thighs">about right</label>
-				    				<input type="radio" name="4-thighs" value="too big" /><label for="4-thighs">too big</label>
-				    				<input type="radio" name="5-thighs" value="way too big" /><label for="5-thighs">way too big</label>
+				    				<input type="radio" name="fit_thighs" value="1" id='tf1' /><label for="tf1">way too small</label>
+				    				<input type="radio" name="fit_thighs" value="2" id='tf2' /><label for="tf2">too small</label>
+				    				<input type="radio" name="fit_thighs" value="3" id='tf3' /><label for="tf3">about right</label>
+				    				<input type="radio" name="fit_thighs" value="4" id='tf4' /><label for="tf4">too big</label>
+				    				<input type="radio" name="fit_thighs" value="5" id='tf5' /><label for="tf5">way too big</label>
 				    				  
 				    				<label for="calves">Are the calves?</label>
-				    				<input type="radio" name="1-calves" value="way too small" /><label for="1-calves">way too small</label>
-				    				<input type="radio" name="2-calves" value="too small" /><label for="2-calves">too small</label>
-				    				<input type="radio" name="3-calves" value="about right" /><label for="3-calves">about right</label>
-				    				<input type="radio" name="4-calves" value="too big" /><label for="4-calves">too big</label>
-				    				<input type="radio" name="5-calves" value="way too big" /><label for="5-calves">way too big</label>
+				    				<input type="radio" name="fit_calves" value="1" id='cf1' /><label for='cf1'>way too small</label>
+				    				<input type="radio" name="fit_calves" value="2" id='cf2' /><label for='cf2'>too small</label>
+				    				<input type="radio" name="fit_calves" value="3" id='cf3' /><label for='cf3'>about right</label>
+				    				<input type="radio" name="fit_calves" value="4" id='cf4' /><label for='cf4'>too big</label>
+				    				<input type="radio" name="fit_calves" value="5" id='cf5' /><label for='cf5'>way too big</label>
 				    							
 				    				<label for="anything-else">Anything else we should know?</label><div class="helper">If you know your measurement in inches or cm, you can enter them here.</div>
 				    				<textarea></textarea>
