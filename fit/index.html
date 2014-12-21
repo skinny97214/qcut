@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <!-- foundation 5 -->
     <link rel="stylesheet" href="/css/foundation.css">
-		<link href='http://fonts.googleapis.com/css?family=Plaster|Josefin+Slab:300|Noticia+Text:400,400italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Plaster|Josefin+Slab:300|Noticia+Text:400,400italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" media="screen, projection" href="/css/onepage.css">
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -22,6 +22,10 @@
 
 	<body id="container">
 
+        <!-- add this to a navbar in the future? -->
+        <div style='position: fixed; right: 0px; top: 0px;'>
+            <a class='button secondary tiny radius' href='/logout'>Logout</a>
+        </div>
 		<section class="white">
 			<p>
 				<img src="/img/qcut-logo-orange.svg" alt="Qcut" />
@@ -87,7 +91,7 @@
 				  	          </select>
 				  	        </div>
 				  	        <div class="small-6 columns">
-				  	          <select name="height_inch" class="" id="mce-HEIGHTINCH">
+				  	          <select name="height_inches" class="" id="mce-HEIGHTINCH">
 				  	          	<option value="-in-">-in-</option>
 				  	          	<option value="0">0&quot;</option>
 				  	          	<option value="1">1&quot;</option>
@@ -204,12 +208,12 @@
 				  		</select>
 				  		
 				  		<label for="jean-brand">Brand of best-fitting pair of jeans</label>
-				  		<input type="text" name="jean-brand" value="" id="jean-brand" />
+				  		<input type="text" name="size_bestfit" value="" id="jean-brand" />
 				  		
 				  		<label>Are those jeans womens jeans or mens?</label>
 				  		
-				  		<input type="radio" name="jean-gender" id="jean-gender-yes" value="yes"><label for="Womens">Womens</label>
-				  		<input type="radio" name="jean-gender" id="jean-gender-no" value="no"><label for="Mens">Mens</label>
+				  		<input type="radio" name="size_is_womens" id="jean-gender-yes" value="1"><label for="Womens">Womens</label>
+				  		<input type="radio" name="size_is_womens" id="jean-gender-no" value="0"><label for="Mens">Mens</label>
 				  		
 				  			
 				  	</div>
@@ -250,7 +254,7 @@
 				    				<input type="radio" name="fit_calves" value="5" id='cf5' /><label for='cf5'>way too big</label>
 				    							
 				    				<label for="anything-else">Anything else we should know?</label><div class="helper">If you know your measurement in inches or cm, you can enter them here.</div>
-				    				<textarea></textarea>
+				    				<textarea name='fit_misc'></textarea>
 				  </div>
 				  <div class="large-2 columns">
 					  &nbsp;
