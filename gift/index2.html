@@ -1,14 +1,88 @@
-<!doctype html>
-<html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-    <p>graphic</p>
-    <p>intro</p>
-    <form action='/checkUser' method='post'>
-      <input type='text' name='email' placeholder='Email' />
-      <button type='submit'>Go</button>
-    </form>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Qcut : Fit Survey</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Qcut">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <!-- foundation 5 -->
+    <link rel="stylesheet" href="/css/foundation.css">
+		<link href='https://fonts.googleapis.com/css?family=Plaster|Josefin+Slab:300|Noticia+Text:400,400italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" media="screen, projection" href="/css/onepage.css">
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+        <!-- ptorelli - controller -->
+        <script>var gAuthHashId = '{{auth_hash_id}}';</script>
+        <script>var gAuthNoLogin = '{{auth_nologin}}';</script>
+        <script src="/control.js"></script>
+
+        <!-- Used by foundation -->
+        <script src="/js/vendor/modernizr.js"></script>
+	</head>
+
+	<body id="container">
+
+        <!-- add this to a navbar in the future? -->
+        <div style='position: fixed; right: 0px; top: 0px;'>
+            <a class='button secondary tiny radius' href='/logout'>Logout</a>
+        </div>
+		<section class="white fit-survey">
+				<img src="/img/qcut-logo-orange.svg" alt="Qcut" />
+				
+				<h2>Lucky you, gift recipients</h2>
+
+			<form method="post" action="">
+			
+<!--				<div class="row">
+				  <div class="large-3 columns">
+				    &nbsp;
+				  </div>
+				  <div class="large-6 columns">
+				  
+				  <form action='/checkUser' method='post'>
+				  <label for="email">Enter your email address to get started</label>
+				    <input type='text' name='email' id='email' />
+				    <button type='submit'>Go</button>
+				  
+				  </div>
+				  <div class="large-3 columns">
+					  &nbsp;
+				  </div>
+				</div>-->
+				
+				<div class="row">
+				  <div class="large-3 columns">
+				    &nbsp;
+				  </div>
+				  <div class="large-6 columns">
+				  
+				  <form action='/checkUser' method='post'>
+				  <label for="email">Enter your email address to get started</label>
+				    <input type='text' name='email' class='error' />
+				    <button type='submit'>Go</button>
+				  
+				  </div>
+				  <div class="large-3 columns">
+					  &nbsp;
+				  </div>
+				</div>
+					
+				
+				
+				
+			</form>
+
+
+		</section>
+
+		<footer>
+			<p>Copyright &copy; 2014, Qcut and respective owners of referenced works.</p>
+		</footer>
+	</body>
 </html>
+
+
+
+
+
