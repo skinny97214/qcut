@@ -1,17 +1,5 @@
-@font-face {
-	font-family: 'Plaster', cursive;
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Noticia Text', serif;
-	font-weight: normal;
-	font-style: normal;
-}
 
 body {
-	font-family: Noticia Text, Georgia, Times, serif;
 	margin: 0;
 	line-height: 1.5;
 	color: rgba(0,0,0,0.65);
@@ -60,7 +48,6 @@ section.fit-survey { text-align: left; }
 on.video a { color: #fff; border-bottom: 1px solid #555; }
 
 h1 {
-	font-family: Plaster, Times New Roman;
 	font-weight: normal;
 	line-height: 1.1;
 	font-size: 2.5em;
@@ -69,6 +56,10 @@ h1 {
 
 h2 {
 	font-weight: normal;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: Josefin Slab;
 }
 
 
@@ -331,4 +322,7 @@ blockquote {
 
 input {
 	clear: after;
+}
+label {
+	font-family: Helvetica Neue;
 }
