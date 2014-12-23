@@ -81,6 +81,14 @@ hr {
 
 div.clear { clear: both; }
 
+.left-text {
+	text-align: left;
+}
+
+.center-text {
+	text-align: center;
+}
+
 /******
 FOOTER
 *******/
@@ -290,8 +298,6 @@ div.center {
 	font-style: italic;
 }
 
-h2 { text-align: center; font-style: italic; }
-
 h3	{
 	font-weight: normal;
 	font-size: 1.4em;
@@ -335,5 +341,9 @@ input + button {
 }
 
 label.error {
-	color: red;
+	color: #b22c1a;
+}
+
+input.error {
+	background-color: #fcf8e6;
 }
