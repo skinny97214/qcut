@@ -103,7 +103,9 @@ $(function() {
 		console.log('firstTrySubmit');
 		$.ajax({
 			method: 'POST',
-            dataType: 'jsonp',
+            headers {
+                'Access-Control-Allow-Origin' : 'http://fit.qcut.com'
+            },
 			data: { email: $('#emailFirstTry').val() },
 			url: 'http://fit.qcut.com/checkUser'
 		}).fail(function(err) {
@@ -121,7 +123,9 @@ $(function() {
 		console.log('tryAgainSubmit');
 		$.ajax({
 			method: 'POST',
-            dataType: 'jsonp',
+            headers {
+                'Access-Control-Allow-Origin' : 'http://fit.qcut.com'
+            },
 			data: { email: $('#emailTryAgain').val() },
 			url: 'http://fit.qcut.com/checkUser'
 		}).fail(function(err) {
@@ -140,7 +144,9 @@ $(function() {
 		console.log('backerSubmit');
 		$.ajax({
 			method: 'POST',
-            dataType: 'jsonp',
+            headers {
+                'Access-Control-Allow-Origin' : 'http://fit.qcut.com'
+            },
 			data: { 
 				placeholder: $('#emailTryAgain').attr('placeholder'),
 				email: $('#emailTryAgain').val(),
