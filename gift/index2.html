@@ -103,6 +103,7 @@ $(function() {
 		console.log('firstTrySubmit');
 		$.ajax({
 			method: 'POST',
+            dataType: 'jsonp',
 			data: { email: $('#emailFirstTry').val() },
 			url: 'http://fit.qcut.com/checkUser'
 		}).fail(function(err) {
@@ -120,6 +121,7 @@ $(function() {
 		console.log('tryAgainSubmit');
 		$.ajax({
 			method: 'POST',
+            dataType: 'jsonp',
 			data: { email: $('#emailTryAgain').val() },
 			url: 'http://fit.qcut.com/checkUser'
 		}).fail(function(err) {
@@ -138,6 +140,7 @@ $(function() {
 		console.log('backerSubmit');
 		$.ajax({
 			method: 'POST',
+            dataType: 'jsonp',
 			data: { 
 				placeholder: $('#emailTryAgain').attr('placeholder'),
 				email: $('#emailTryAgain').val(),
