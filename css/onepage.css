@@ -329,3 +329,11 @@ label {
 form p {
 	margin: 1em 0 0;
 }
+
+input + button {
+	margin-top: 1em;
+}
+
+label.error {
+	color: red;
+}
