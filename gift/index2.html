@@ -113,12 +113,9 @@ $(function() {
 	$('#firstTrySubmit').on('click', function() {
 		console.log('firstTrySubmit');
 		$.ajax({
-			method: 'POST',
-            beforeSend: function(req) {
-                req.setRequestHeader('Access-Control-Allow-Origin', 'http://qcut.com');
-            },
+			method: 'GET',
 			data: { email: $('#emailFirstTry').val() },
-			url: 'http://fit.qcut.com/checkUser'
+			url: '/checkUser'
 		}).fail(function(err) {
 			console.log('firstTrySubmit:', err);
 			$('#step1').hide();
@@ -133,12 +130,9 @@ $(function() {
 	$('#tryAgainSubmit').on('click', function() {
 		console.log('tryAgainSubmit');
 		$.ajax({
-			method: 'POST',
-            beforeSend: function(req) {
-                req.setRequestHeader('Access-Control-Allow-Origin', 'http://qcut.com');
-            },
+			method: 'GET',
 			data: { email: $('#emailTryAgain').val() },
-			url: 'http://fit.qcut.com/checkUser'
+			url: '/checkUser'
 		}).fail(function(err) {
 			console.log('tryAgainSubmit:', err);
 			var email = $('#emailTryAgain').val();
@@ -154,10 +148,7 @@ $(function() {
 	$('#backerSubmit').on('click', function() {
 		console.log('backerSubmit');
 		$.ajax({
-			method: 'POST',
-            beforeSend: function(req) {
-                req.setRequestHeader('Access-Control-Allow-Origin', 'http://qcut.com');
-            },
+			method: 'GET',
 			data: { 
 				placeholder: $('#emailTryAgain').attr('placeholder'),
 				email: $('#emailTryAgain').val(),
@@ -167,7 +158,7 @@ $(function() {
 				first_name_giver: $('#first_name_giver').val(),
 				last_name_giver: $('#last_name_giver').val()
 			},
-			url: 'http://fit.qcut.com/supportBackerHelp'
+			url: '/supportBackerHelp'
 		}).fail(function(err) {
 			console.log('backerSubmit:', err);
 		}).done(function(data) {
