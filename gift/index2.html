@@ -103,8 +103,8 @@ $(function() {
 		console.log('firstTrySubmit');
 		$.ajax({
 			method: 'POST',
-            headers: {
-                'Access-Control-Allow-Origin' : 'http://qcut.com'
+            beforeSend: function(req) {
+                req.setRequestHeader('Access-Control-Allow-Origin', 'http://qcut.com');
             },
 			data: { email: $('#emailFirstTry').val() },
 			url: 'http://fit.qcut.com/checkUser'
@@ -123,8 +123,8 @@ $(function() {
 		console.log('tryAgainSubmit');
 		$.ajax({
 			method: 'POST',
-            headers: {
-                'Access-Control-Allow-Origin' : 'http://qcut.com'
+            beforeSend: function(req) {
+                req.setRequestHeader('Access-Control-Allow-Origin', 'http://qcut.com');
             },
 			data: { email: $('#emailTryAgain').val() },
 			url: 'http://fit.qcut.com/checkUser'
@@ -144,8 +144,8 @@ $(function() {
 		console.log('backerSubmit');
 		$.ajax({
 			method: 'POST',
-            headers: {
-                'Access-Control-Allow-Origin' : 'http://qcut.com'
+            beforeSend: function(req) {
+                req.setRequestHeader('Access-Control-Allow-Origin', 'http://qcut.com');
             },
 			data: { 
 				placeholder: $('#emailTryAgain').attr('placeholder'),
