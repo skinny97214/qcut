@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class='no-js' lang="en">
+
 	<head>
-		<title>Qcut : Gift Certificates</title>
 		<meta charset="utf-8">
 		<meta name="author" content="Qcut">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 		<!-- foundation 5 -->
-		<link rel="stylesheet" href="/css/foundation.css">
-		<link href='https://fonts.googleapis.com/css?family=Plaster|Josefin+Slab:300|Noticia+Text:400,400italic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" media="screen, projection" href="/css/onepage.css">
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<!-- Used by foundation -->
+		<link rel="stylesheet" href="/css/normalize.css">
+	    <link rel="stylesheet" href="/css/foundation.css">
 		<script src="/js/vendor/modernizr.js"></script>
-
+	
+		<title>Qcut : Gift Certificates</title>
+		<link href='https://fonts.googleapis.com/css?family=Plaster|Josefin+Slab:300|Noticia+Text:400,400italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="/css/onepage.css">
+	
+	    <!-- Need to load jQuery before the controls -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+	    </script>
+	
 		<!-- You can move this to onepage.css if you want, might
 		     choose to rename the pages if it makes more sense -->
 		<style>
@@ -106,8 +112,16 @@
 		<footer>
 			<p>Copyright &copy; 2014, Qcut and respective owners of referenced works.</p>
 		</footer>
-
+    <!-- required by foundation 5 -->
+    <script src="/js/foundation.min.js"></script>
+    <script>$(document).foundation();</script>
 <script>
+
+// ie8 bug
+if (typeof console == "undefined" || typeof console.log == "undefined") {
+    var console = { log: function() {} }; 
+}
+
 $(function() {
 
 	$('#firstTrySubmit').on('click', function() {

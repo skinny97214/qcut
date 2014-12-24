@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Qcut : Fit Survey</title>
-		<meta charset="utf-8">
-		<meta name="author" content="Qcut">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class='no-js' lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Qcut">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 	<!-- foundation 5 -->
-	<link rel="stylesheet" href="/css/foundation.css">
-		<link href='https://fonts.googleapis.com/css?family=Plaster|Josefin+Slab:300|Noticia+Text:400,400italic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" media="screen, projection" href="/css/onepage.css">
+	<link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/foundation.css">
+	<script src="/js/vendor/modernizr.js"></script>
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<title>Qcut : Fit Survey</title>
+	<link href='https://fonts.googleapis.com/css?family=Plaster|Josefin+Slab:300|Noticia+Text:400,400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/css/onepage.css">
 
-		<!-- ptorelli - controller -->
-		<script>var gAuthHashId = '{{auth_hash_id}}';</script>
-		<script src="/control.js"></script>
+    <!-- Need to load jQuery before the controls -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+    <!-- dynamic html link -->
+	<script>
+		var gAuthHashId = '{{auth_hash_id}}';
+	</script>
+	<script src="/control.js"></script>
 
-		<!-- Used by foundation -->
-		<script src="/js/vendor/modernizr.js"></script>
-	</head>
+</head>
 
 	<body id="container">
 		<section class="white">
@@ -43,5 +49,7 @@
 		<footer>
 			<p>Copyright &copy; 2014, Qcut and respective owners of referenced works.</p>
 		</footer>
+    <script src="/js/foundation.min.js"></script>
+    <script>$(document).foundation();</script>
 	</body>
 </html>
