@@ -24,6 +24,10 @@
 	</script>
 	<script src="/control.js"></script>
 
+	<!-- TODO maybe move this -->	
+	<style>.active_error { border-right: 3px solid red; border-left: 3px solid red; margin: 10px; padding: 10px;`}
+	</style>
+
 </head>
 
 <body id="container">
@@ -41,15 +45,17 @@
 				&nbsp;
 			</div>
 			<div class="large-6 columns">
+				<div class='reqerr'><!-- INDENT ME-->
 				<div class="row collapse">
 					<label>Name</label>
 					<div class="small-6 columns">
-						<input type="text" name="first_name" value="" placeholder="first name" />
+						<input type="text" name="first_name" value="" placeholder="first name" required />
 					</div>
 					<div class="small-6 columns">
-						<input type="text" name="last_name" value="" placeholder="last name" />
+						<input type="text" name="last_name" value="" placeholder="last name" required />
 					</div>
 				</div>
+				</div><!-- REQERR -->
 			</div>
 			<div class="large-3 columns">
 				&nbsp;
@@ -61,8 +67,9 @@
 				&nbsp;
 			</div>
 			<div class="large-6 columns">
+				<div class='reqerr'><!-- INDENT ME-->
 				<label for="email">Email address</label>
-				<input type="text" name="email" value="" placeholder="email" />
+				<input type="text" name="email" value="" placeholder="email" required />
 				<!-- not visible for users who clicked on unique link-->
 
 				<!--<label>Are you a Kickstarter backer or is this a gift from a Kickstarter backer? </label>
@@ -70,6 +77,7 @@
                                         <input type="radio" name="ks-gift" id="ks-gift-yes" value="yes"><br>
                                         <label for="No">No</label>
                                         <input type="radio" name="ks-gift" id="ks-gift-no" value="no">  -->
+				</div><!-- REQERR -->
 			</div>
 			<div class="large-3 columns">
 				&nbsp;
@@ -84,10 +92,11 @@
 			<div class="large-6 columns">
 				<!--sizing system: US - Imperial | <a>UK - Imperial</a> | <a>EU - Metric</a>-->
 
+				<div class='reqerr'><!-- INDENT ME-->
 				<div class="row collapse">
 					<label for="HEIGHTFEET">Height </label>
 					<div class="small-3 columns">
-						<select name="height_feet" class="" id="mce-HEIGHTFEET">
+						<select name="height_feet" class="" id="mce-HEIGHTFEET" required>
 							<option value="-ft-">-ft-</option>
 							<option value="4">4&#39;</option>
 							<option value="5">5&#39;</option>
@@ -95,7 +104,7 @@
 						</select>
 					</div>
 					<div class="small-3 columns">
-						<select name="height_inches" class="" id="mce-HEIGHTINCH">
+						<select name="height_inches" class="" id="mce-HEIGHTINCH" required>
 							<option value="-in-">-in-</option>
 							<option value="0">0&quot;</option>
 							<option value="1">1&quot;</option>
@@ -113,15 +122,17 @@
 					</div>
 					<div class="small-6 columns"></div>
 				</div>
+				</div><!-- REQERR -->
 
+				<div class='reqerr'><!-- INDENT ME-->
 				<label for="weight">Today's weight </label>
 				<div class="helper">You'll have a chance to update this in the future.</div>
-				<input type="text" name="weight" value="" placeholder="in lbs" />
+				<input type="text" name="weight" value="" placeholder="in lbs" required />
+				</div><!-- REQERR -->
 
-
-
+				<div class='reqerr'><!-- INDENT ME-->
 				<label for="mce-SHOESIZE">Shoe size </label>
-				<select name="size_shoe" class="" id="mce-SHOESIZE">
+				<select name="size_shoe" class="" id="mce-SHOESIZE" required>
 					<option value="--">--</option>
 					<option value="3">3</option>
 					<option value="3.5">3.5</option>
@@ -147,12 +158,13 @@
 					<option value="13.5">13.5</option>
 					<option value="14">14</option>
 				</select>
+				</div>
 
+				<div class='reqerr'><!-- INDENT ME-->
 				<div class="row collapse">
 					<label for="mce-BRABAND">Bra size </label>
-
 					<div class="small-3 columns">
-						<select name="size_bra_band" class="" id="mce-BRABAND">
+						<select name="size_bra_band" class="" id="mce-BRABAND" required>
 							<option value="--">-band-</option>
 							<option value="28">28</option>
 							<option value="30">30</option>
@@ -167,7 +179,7 @@
 						</select>
 					</div>
 					<div class="small-3 columns">
-						<select name="size_bra_cup" class="" id="mce-BRACUP">
+						<select name="size_bra_cup" class="" id="mce-BRACUP" required>
 							<option value="--">-cup-</option>
 							<option value="AA">AA</option>
 							<option value="A">A</option>
@@ -187,22 +199,25 @@
 					</div>
 					<div class="small-6 columns"></div>
 				</div>
+				</div><!-- REQERR -->
 
+				<div class='reqerr'><!-- INDENT ME-->
 				<label for="jean-brand">Brand of best-fitting pair of jeans</label>
-				<input type="text" name="size_bestfit" value="" id="jean-brand" />
+				<input type="text" name="size_bestfit" value="" id="jean-brand" required />
+				</div><!-- REQERR -->
 
+				<div class='reqerr'><!-- INDENT ME-->
 				<label>Are those jeans womens jeans or mens?</label>
-
-				<input type="radio" name="size_is_womens" id="jean-gender-yes" value="1">
+				<input type="radio" name="size_is_womens" id="jean-gender-yes" value="1" required />
 				<label for="Womens">Womens</label>
-				<input type="radio" name="size_is_womens" id="jean-gender-no" value="0">
+				<input type="radio" name="size_is_womens" id="jean-gender-no" value="0" required />
 				<label for="Mens">Mens</label>
+				</div><!-- REQERR -->
 
-
-
+				<div class='reqerr'><!-- INDENT ME-->
 				<label for="mce-PANTSIZE">Size of you best-fitting pair of jeans </label>
 				<div class="helper">First number is waist size. / Second is traditional sizing.</div>
-				<select name="size_inseam" class="" id="mce-PANTSIZE">
+				<select name="size_inseam" class="" id="mce-PANTSIZE" required>
 					<option value=""></option>
 					<option value="US 23 / 000">US 23 / 000</option>
 					<option value="US 24 / 00">US 24 / 00</option>
@@ -222,7 +237,7 @@
 					<option value="US 39 / 26">US 39 / 26</option>
 					<option value="US 40 / 28">US 40 / 28</option>
 				</select>
-
+				</div><!-- REQERR -->
 
 			</div>
 			<div class="large-3 columns">
@@ -240,74 +255,86 @@
 			<div class="large-6 columns">
 				<p>Usually when you try on jeans, if the hips fit…</p>
 
+				<div class='reqerr'><!-- INDENT ME-->
 				<p class="no-margin-bottom">Then the waist is?</p>
-				<input type="radio" name="fit_waist" value="1" id='fw1' />
+				<input type="radio" name="fit_waist" value="1" id='fw1' required />
 				<label for="fw1">way too small</label>
-				<input type="radio" name="fit_waist" value="2" id='fw2' />
+				<input type="radio" name="fit_waist" value="2" id='fw2' required />
 				<label for="fw2">too small</label>
-				<input type="radio" name="fit_waist" value="3" id='fw3' />
+				<input type="radio" name="fit_waist" value="3" id='fw3' required />
 				<label for="fw3">about right</label>
-				<input type="radio" name="fit_waist" value="4" id='fw4' />
+				<input type="radio" name="fit_waist" value="4" id='fw4' required />
 				<label for="fw4">too big</label>
-				<input type="radio" name="fit_waist" value="5" id='fw5' />
+				<input type="radio" name="fit_waist" value="5" id='fw5' required />
 				<label for="fw5">way too big</label>
+				</div><!-- REQERR -->
 
+				<div class='reqerr'><!-- INDENT ME-->
 				<p class="no-margin-bottom">Are the thighs?</p>
-				<input type="radio" name="fit_thighs" value="1" id='tf1' />
+				<input type="radio" name="fit_thighs" value="1" id='tf1' required />
 				<label for="tf1">way too small</label>
-				<input type="radio" name="fit_thighs" value="2" id='tf2' />
+				<input type="radio" name="fit_thighs" value="2" id='tf2' required />
 				<label for="tf2">too small</label>
-				<input type="radio" name="fit_thighs" value="3" id='tf3' />
+				<input type="radio" name="fit_thighs" value="3" id='tf3' required />
 				<label for="tf3">about right</label>
-				<input type="radio" name="fit_thighs" value="4" id='tf4' />
+				<input type="radio" name="fit_thighs" value="4" id='tf4' required />
 				<label for="tf4">too big</label>
-				<input type="radio" name="fit_thighs" value="5" id='tf5' />
+				<input type="radio" name="fit_thighs" value="5" id='tf5' required />
 				<label for="tf5">way too big</label>
+				</div><!-- REQERR -->
 
+				<div class='reqerr'><!-- INDENT ME-->
 				<p class="no-margin-bottom">Are the calves?</p>
-				<input type="radio" name="fit_calves" value="1" id='cf1' />
+				<input type="radio" name="fit_calves" value="1" id='cf1' required />
 				<label for='cf1'>way too small</label>
-				<input type="radio" name="fit_calves" value="2" id='cf2' />
+				<input type="radio" name="fit_calves" value="2" id='cf2' required />
 				<label for='cf2'>too small</label>
-				<input type="radio" name="fit_calves" value="3" id='cf3' />
+				<input type="radio" name="fit_calves" value="3" id='cf3' required />
 				<label for='cf3'>about right</label>
-				<input type="radio" name="fit_calves" value="4" id='cf4' />
+				<input type="radio" name="fit_calves" value="4" id='cf4' required />
 				<label for='cf4'>too big</label>
-				<input type="radio" name="fit_calves" value="5" id='cf5' />
+				<input type="radio" name="fit_calves" value="5" id='cf5' required />
 				<label for='cf5'>way too big</label>
+				</div><!-- REQERR -->
 				
+				<div class='reqerr'><!-- INDENT ME-->
 				<p class="no-margin-bottom">Is the length?</p>
-				<input type="radio" name="fit_length" value="1" id='fl1' />
+				<input type="radio" name="fit_length" value="1" id='fl1' required />
 				<label for='fl1'>way too short</label>
-				<input type="radio" name="fit_length" value="2" id='fl2' />
+				<input type="radio" name="fit_length" value="2" id='fl2' required />
 				<label for='fl2'>too short</label>
-				<input type="radio" name="fit_length" value="3" id='fl3' />
+				<input type="radio" name="fit_length" value="3" id='fl3' required />
 				<label for='fl3'>about right</label>
-				<input type="radio" name="fit_length" value="4" id='fl4' />
+				<input type="radio" name="fit_length" value="4" id='fl4' required />
 				<label for='fl4'>too long</label>
-				<input type="radio" name="fit_length" value="5" id='fl5' />
+				<input type="radio" name="fit_length" value="5" id='fl5' required />
 				<label for='fl5'>way too long</label>
+				</div><!-- REQERR -->
 
+				<div class='reqerr'><!-- INDENT ME-->
 				<p class="no-margin-bottom">How tight do you want your jeans to fit?</p>
-				<input type="radio" name="fit_tightness" value="1" id='ti1' />
+				<input type="radio" name="fit_tightness" value="1" id='ti1' required />
 				<label for='ti1'>tight</label>
-				<input type="radio" name="fit_tightness" value="2" id='ti2' />
+				<input type="radio" name="fit_tightness" value="2" id='ti2' required />
 				<label for='ti2'>snug</label>
-				<input type="radio" name="fit_tightness" value="3" id='ti3' />
+				<input type="radio" name="fit_tightness" value="3" id='ti3' required />
 				<label for='ti3'>just right</label>
-				<input type="radio" name="fit_tightness" value="4" id='ti4' />
+				<input type="radio" name="fit_tightness" value="4" id='ti4' required />
 				<label for='ti4'>loose</label>
-				<input type="radio" name="fit_tightness" value="5" id='ti5' />
+				<input type="radio" name="fit_tightness" value="5" id='ti5' required />
 				<label for='ti5'>baggy</label>
+				</div><!-- REQERR -->
 
+				<div class='reqerr'><!-- INDENT ME-->
 				<p class="no-margin-bottom">How long is your torso?</p>
 				<div class="helper">Hint: If you don't know, you're average.</div>
-				<input type="radio" name="fit_torso" value="1" id='to1' />
+				<input type="radio" name="fit_torso" value="1" id='to1' required />
 				<label for='to1'>short-waisted</label>
-				<input type="radio" name="fit_torso" value="2" id='to2' />
+				<input type="radio" name="fit_torso" value="2" id='to2' required />
 				<label for='to2'>average</label>
-				<input type="radio" name="fit_torso" value="3" id='to3' />
+				<input type="radio" name="fit_torso" value="3" id='to3' required />
 				<label for='to3'>long-waisted</label>
+				</div><!-- REQERR -->
 
 				<p>Anything else we should know?</p>
 				<div class="helper">If you know your measurement in inches or cm, you can enter them here.</div>
