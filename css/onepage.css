@@ -341,10 +341,10 @@ input + button {
 	margin-top: 1em;
 }
 
-label.error, .error label {
+label.error, .error label, .error p {
 	color: #b22c1a;
 }
 
-input.error, .error input {
+input.error, .error input, .error select, .error p {
 	background-color: #fcf8e6;
 }
