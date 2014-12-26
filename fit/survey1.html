@@ -75,21 +75,37 @@
 
 		<div class="row">
 			<div class="large-offset-3 large-6 columns end">
-				<!--sizing system: US - Imperial | <a>UK - Imperial</a> | <a>EU - Metric</a>-->
-
+				<div class="reqerr">
+				<label for="country">Country</label>
+					<select name="country" required>
+						<option value="United States">United States</option>
+						<option value="Australia">Australia</option>
+						<option value="Austria">Austria</option>
+						<option value="Canada">Canada</option>
+						<option value="Germany">Germany</option>
+						<option value="Hong Kong">Hong Kong</option>
+						<option value="Ireland">Ireland</option>
+						<option value="Netherlands">Netherlands</option>
+						<option value="New Zealand">New Zealand</option>
+						<option value="South Africa">South Africa</option>
+						<option value="Sweden">Sweden</option>
+						<option value="Switzerland">Switzerland</option>
+						<option value="United Kingdom">United Kingdom</option>
+					</select>
+					</div>
 				<div class='reqerr'><!-- INDENT ME-->
 				<div class="row collapse">
-					<label for="HEIGHTFEET">Height </label>
-					<div class="small-3 columns">
-						<select name="height_feet" class="" id="mce-HEIGHTFEET" required>
+					<label for="HEIGHT">Height</label>
+<!--					<div class="small-3 columns">
+						<select name="height_feet" class="imperial" id="mce-HEIGHTFEET" required>
 							<option value="">-ft-</option>
 							<option value="4">4&#39;</option>
 							<option value="5">5&#39;</option>
 							<option value="6">6&#39;</option>
 						</select>
 					</div>
-					<div class="small-3 columns">
-						<select name="height_inches" class="" id="mce-HEIGHTINCH" required>
+					<div class="small-3 columns end imperial">
+						<select name="height_inches" class="imperial" id="mce-HEIGHTINCH" required>
 							<option value="">-in-</option>
 							<option value="0">0&quot;</option>
 							<option value="1">1&quot;</option>
@@ -104,15 +120,16 @@
 							<option value="10">10&quot;</option>
 							<option value="11">11&quot;</option>
 						</select>
-					</div>
-					<div class="small-6 columns"></div>
+					</div>-->
+					<input type="text" name="height_cm" class="metric" value="" placeholder="in centimeters" />
 				</div>
 				</div><!-- REQERR -->
 
 				<div class='reqerr'><!-- INDENT ME-->
 				<label for="weight">Today's weight </label>
 				<div class="helper">You'll have a chance to update this in the future.</div>
-				<input type="text" name="weight" value="" placeholder="in lbs" required />
+				<!--<input type="text" name="weight_imperial" value="" placeholder="in lbs" required />-->
+				<input type="text" name="weight_metric" class="metric" value="" placeholder="in kilos" required />
 				</div><!-- REQERR -->
 
 				<div class='reqerr'><!-- INDENT ME-->
@@ -201,8 +218,8 @@
 
 				<div class='reqerr'><!-- INDENT ME-->
 				<label for="mce-PANTSIZE">Size of you best-fitting pair of jeans </label>
-				<div class="helper">First number is waist size. / Second is traditional sizing.</div>
-				<select name="size_inseam" class="" id="mce-PANTSIZE" required>
+				<div class="helper size_US">First number is waist size. / Second is traditional sizing.</div>
+				<select name="size_inseam size_US" class="" id="mce-PANTSIZE" required>
 					<option value=""></option>
 					<option value="US 23 / 000">US 23 / 000</option>
 					<option value="US 24 / 00">US 24 / 00</option>
@@ -222,6 +239,29 @@
 					<option value="US 39 / 26">US 39 / 26</option>
 					<option value="US 40 / 28">US 40 / 28</option>
 				</select>
+				
+				<select name="size_inseam size_EU" class="" id="mce-PANTSIZE" required>
+					<option value=""></option>
+					<option value="US 23 / 000">US 23 / 000</option>
+					<option value="US 24 / 00">US 24 / 00</option>
+					<option value="US 25 / 0">US 25 / 0</option>
+					<option value="US 26 / 2">US 26 / 2</option>
+					<option value="US 27 / 4">US 27 / 4</option>
+					<option value="US 28 / 6">US 28 / 6</option>
+					<option value="US 29 / 8">US 29 / 8</option>
+					<option value="US 30 / 10">US 30 / 10</option>
+					<option value="US 31 / 12">US 31 / 12</option>
+					<option value="US 32 / 14">US 32 / 14</option>
+					<option value="US 34 / 16">US 34 / 16</option>
+					<option value="US 35 / 18">US 35 / 18</option>
+					<option value="US 36 / 20">US 36 / 20</option>
+					<option value="US 37 / 22">US 37 / 22</option>
+					<option value="US 38 / 24">US 38 / 24</option>
+					<option value="US 39 / 26">US 39 / 26</option>
+					<option value="US 40 / 28">US 40 / 28</option>
+				</select>
+				
+				
 				</div><!-- REQERR -->
 
 			</div>
