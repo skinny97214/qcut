@@ -96,66 +96,94 @@
 				<div class="reqerr">
 				<label for="zipcode">Zipcode or postcode</label>
 				<input type="text" name="zipcode" value="" />
-				<div class='reqerr'><!-- INDENT ME-->
-				<div class="row collapse">
-					<label for="HEIGHT">Height</label>
-					<div class="small-3 columns">
-						<select name="height_feet" class="imperial" id="mce-HEIGHTFEET" required>
-							<option value="">-ft-</option>
-							<option value="4">4&#39;</option>
-							<option value="5">5&#39;</option>
-							<option value="6">6&#39;</option>
-						</select>
+<!--				<div class='reqerr size_height imperial'>
+					<div class="row collapse">
+						<label>Height</label>
+						<div class="small-3 columns">
+							<select name="height_feet" class="imperial" required>
+								<option value="">-ft-</option>
+								<option value="4">4&#39;</option>
+								<option value="5">5&#39;</option>
+								<option value="6">6&#39;</option>
+							</select>
+						</div>
+						<div class="small-3 columns end imperial">
+							<select name="height_inches" class="imperial" required>
+								<option value="">-in-</option>
+								<option value="0">0&quot;</option>
+								<option value="1">1&quot;</option>
+								<option value="2">2&quot;</option>
+								<option value="3">3&quot;</option>
+								<option value="4">4&quot;</option>
+								<option value="5">5&quot;</option>
+								<option value="6">6&quot;</option>
+								<option value="7">7&quot;</option>
+								<option value="8">8&quot;</option>
+								<option value="9">9&quot;</option>
+								<option value="10">10&quot;</option>
+								<option value="11">11&quot;</option>
+							</select>
+						</div>
+
 					</div>
-					<div class="small-3 columns end imperial">
-						<select name="height_inches" class="imperial" id="mce-HEIGHTINCH" required>
-							<option value="">-in-</option>
-							<option value="0">0&quot;</option>
-							<option value="1">1&quot;</option>
-							<option value="2">2&quot;</option>
-							<option value="3">3&quot;</option>
-							<option value="4">4&quot;</option>
-							<option value="5">5&quot;</option>
-							<option value="6">6&quot;</option>
-							<option value="7">7&quot;</option>
-							<option value="8">8&quot;</option>
-							<option value="9">9&quot;</option>
-							<option value="10">10&quot;</option>
-							<option value="11">11&quot;</option>
-						</select>
-					</div>
-<!--					<input type="text" name="height_cm" class="metric" value="" placeholder="in centimeters" />-->
+				</div>-->
+				
+				<div class='reqerr size_height metric'>
+					<label>Height</label>
+					<input type="text" name="height_cm" class="metric" value="" placeholder="in centimeters" />
 				</div>
-				</div><!-- REQERR -->
 				<label for="age">Age</label>
 				<input type="text" name="age" value="" />
-				<div class='reqerr'><!-- INDENT ME-->
-				<label for="weight">Today's weight </label>
-				<div class="helper">You'll have a chance to update this in the future.</div>
-				<input type="text" name="weight_imperial" value="" placeholder="in lbs" required />
-				<!--<input type="text" name="weight_metric" class="metric" value="" placeholder="in kilos" required />-->
-				</div><!-- REQERR -->
-
-				<div class='reqerr'><!-- INDENT ME-->
-				<label for="mce-SHOESIZE">Shoe size </label>
-				<select name="size_shoe" class="" id="mce-SHOESIZE" required>
-					<option value="">--</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-					<option value="13">13</option>
-					<option value="14">14</option>
-				</select>
+				
+<!--				<div class='reqerr size-weight imperial'>
+					<label for="weight imperial">Today's weight</label>
+					<div class="helper">You'll have a chance to update this in the future.</div>
+					<input type="text" placeholder="in lbs" required />
+				</div>-->
+				<div class='reqerr size-weight metric'>
+					<label for="weight imperial">Today's weight</label>
+					<div class="helper">You'll have a chance to update this in the future.</div>
+				<input type="text" value="" placeholder="in kilos" required />
 				</div>
 
-				<div class='reqerr'><!-- INDENT ME-->
+<!--				<div class='reqerr size_shoe US'>
+					<label>Shoe size</label>
+					<select name="size_shoe_US" class="" required>
+						<option value="">--</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+					</select>
+					</div>-->
+
+				<div class='reqerr size_shoe EU'>
+					<label>Shoe size</label>
+					<select name="size_shoe_EU" class="" required>
+						<option value="">--</option>
+						<option value="33">EU 33</option>
+						<option value="34">EU 34</option>
+						<option value="35">EU 35</option>
+						<option value="36">EU 36</option>
+						<option value="37">EU 37</option>
+						<option value="38">EU 38</option>
+						<option value="39">EU 39</option>
+						<option value="40">EU 40</option>
+						<option value="41">EU 41</option>
+						<option value="42">EU 42</option>
+						<option value="43">EU 43</option>
+						<option value="44">EU 44</option>
+					</select>
+					</div>
+				<div class='reqerr'>
 				<div class="row collapse">
 					<label for="mce-BRABAND">Bra size </label>
 					<div class="small-3 columns">
